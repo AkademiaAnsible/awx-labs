@@ -1,0 +1,31 @@
+---
+# Variables specific to web servers
+
+# Web Server Configuration
+web_server_type: nginx
+web_server_port: 80
+web_server_ssl_port: 443
+web_root: /var/www/html
+
+# Application Configuration
+app_name: myapp
+app_version: 1.0.0
+app_port: 8080
+
+# SSL/TLS Configuration
+ssl_enabled: true
+ssl_certificate_path: /etc/ssl/certs
+ssl_key_path: /etc/ssl/private
+
+# Performance Tuning
+max_connections: 1000
+worker_processes: 4
+keepalive_timeout: 65
+
+# Monitoring
+enable_health_check: true
+health_check_endpoint: /health
+
+# Backup Configuration
+backup_web_content: true
+backup_schedule: "0 2 * * *"

@@ -1,0 +1,35 @@
+---
+# Global variables applicable to all hosts
+# These variables can be overridden by more specific group_vars or host_vars
+
+# SSH Configuration
+ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+ansible_become: true
+ansible_become_method: sudo
+
+# System Configuration
+system_locale: en_US.UTF-8
+system_timezone: Europe/Warsaw
+
+# Package Management
+package_state: present
+enable_auto_updates: false
+
+# Logging
+log_level: INFO
+syslog_server: 192.168.1.100
+
+# Security
+firewall_enabled: true
+selinux_state: enforcing
+
+# DNS Servers
+dns_servers:
+  - 8.8.8.8
+  - 8.8.4.4
+
+# NTP Configuration
+ntp_enabled: true
+ntp_servers:
+  - pool.ntp.org
+  - time.google.com

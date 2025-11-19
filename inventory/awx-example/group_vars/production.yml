@@ -1,0 +1,45 @@
+---
+# Variables specific to production environment
+
+# Environment Settings
+environment_type: production
+debug_enabled: false
+verbose_logging: false
+
+# Application Configuration
+app_env: production
+app_debug: false
+app_log_level: WARNING
+
+# Database Configuration
+db_name: myapp_prod
+db_user: prod_user
+db_host: db01
+
+# Security (strict for production)
+firewall_enabled: true
+ssl_enabled: true
+selinux_state: enforcing
+fail2ban_enabled: true
+
+# Performance (optimized for production)
+max_connections: 1000
+worker_processes: auto
+
+# Backup Configuration
+backup_enabled: true
+backup_retention_days: 30
+backup_schedule: "0 2 * * *"
+
+# Monitoring
+monitoring_enabled: true
+alerting_enabled: true
+metrics_retention_days: 90
+
+# High Availability
+ha_enabled: true
+load_balancer: lb01
+
+# Maintenance Windows
+maintenance_window_start: "02:00"
+maintenance_window_end: "04:00"

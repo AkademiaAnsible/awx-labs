@@ -1,0 +1,135 @@
+# Ansible .gitignore
+
+# Ansible retry files
+*.retry
+
+# Ansible vault password files
+.vault_pass
+.vault_password
+vault_pass.txt
+vault_password.txt
+*vault_pass*
+*vault_password*
+
+# Ansible facts cache
+facts.d/
+*.fact
+
+# Ansible Galaxy
+.ansible/
+.galaxy_install_info
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+.virtualenv
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Log files
+*.log
+logs/
+ansible.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+.tmp/
+
+# SSH keys (important!)
+*.pem
+*.key
+id_rsa*
+*.ppk
+ssh_keys/
+
+# Credentials and secrets
+secrets.yml
+secret.yml
+credentials.yml
+*secret*
+*credential*
+passwords.yml
+
+# AWX/Tower specific
+.tower_cli.cfg
+tower_cli.cfg
+
+# Collections downloaded by ansible-galaxy
+collections/
+roles/*/tests/
+~/.ansible/
+
+# Terraform (if used alongside)
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# OS generated files
+Thumbs.db
+.Spotlight-V100
+.Trashes
+
+# Certificate files
+*.crt
+*.cer
+*.csr
+*.der
+*.p12
+*.pfx
+
+# Inventory files with real IPs/credentials (if you have production data)
+# Uncomment the line below if you want to ignore production inventory
+# inventory/production/
+
+# Ansible modules bytecode
+modules/__pycache__/
+library/__pycache__/
+
+# Test output
+test_output/
+junit/
+coverage/
+htmlcov/
+.coverage
+.pytest_cache/

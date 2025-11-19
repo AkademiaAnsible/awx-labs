@@ -1,0 +1,40 @@
+---
+# Variables specific to development environment
+
+# Environment Settings
+environment_type: development
+debug_enabled: true
+verbose_logging: true
+
+# Application Configuration
+app_env: development
+app_debug: true
+app_log_level: DEBUG
+
+# Database Configuration
+db_name: myapp_dev
+db_user: dev_user
+db_host: dev-db01
+
+# Security (relaxed for development)
+firewall_enabled: false
+ssl_enabled: false
+selinux_state: permissive
+
+# Performance (lower resources for dev)
+max_connections: 100
+worker_processes: 2
+
+# Development Tools
+install_dev_tools: true
+dev_tools:
+  - git
+  - vim
+  - curl
+  - wget
+  - htop
+  - net-tools
+
+# Auto-deploy Configuration
+auto_deploy_enabled: true
+deploy_branch: develop
