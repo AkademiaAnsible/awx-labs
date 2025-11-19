@@ -1,0 +1,30 @@
+- name: Syncuj hosty z CMDB do AWX
+  hosts: localhost
+  collections:
+    - awx.awx
+  tasks:
+    #- name: Pobierz hosty z CMDB
+    #  uri:
+    #    url: "https://cmdb.example.com/api/hosts"
+    #    method: GET
+    #    return_content: yes
+    #  register: cmdb_hosts
+
+    #- name: Dodaj/aktualizuj hosty w AWX
+    #  awx.awx.host:
+    #    name: "{{ item.name }}"
+    #    inventory: "Moje Inventory"
+    #    state: present
+    #    variables:
+    #      ansible_host: "{{ item.ip }}"
+    #      env: "{{ item.env }}"
+    #  loop: "{{ cmdb_hosts.json }}"
+
+    - name: Dodaj/aktualizuj hosty w AWX
+      awx.awx.host:
+        name: "test"
+        inventory: "Moje Inventory"
+        state: present
+        variables:
+          ansible_host: "1.2.3.4"
+          env: "test"

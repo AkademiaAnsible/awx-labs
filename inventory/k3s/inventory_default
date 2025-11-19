@@ -8,7 +8,7 @@ system_env = prod
 #static 20.105.201.142
 
 [k3s_nodes]
-20.224.219.29
+18.169.240.72
 
 [k3s_nodes_cluster]
 40.118.121.196

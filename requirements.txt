@@ -1,0 +1,7 @@
+ansible
+#boto
+#boto3
+#yamllint
+#msrestazure
+#msrest
+#azure.cli
