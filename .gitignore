@@ -14,6 +14,7 @@ vault_password.txt
 # Ansible facts cache
 facts.d/
 *.fact
+ansible_facts/
 
 # Ansible Galaxy
 .ansible/
@@ -84,6 +85,7 @@ credentials.yml
 *secret*
 *credential*
 passwords.yml
+.env
 
 # AWX/Tower specific
 .tower_cli.cfg
@@ -118,9 +120,8 @@ Thumbs.db
 *.p12
 *.pfx
 
-# Inventory files with real IPs/credentials (if you have production data)
-# Uncomment the line below if you want to ignore production inventory
-# inventory/production/
+# Generated inventory from NetBox
+inventory/netbox-generated/
 
 # Ansible modules bytecode
 modules/__pycache__/
@@ -133,3 +134,7 @@ coverage/
 htmlcov/
 .coverage
 .pytest_cache/
+
+# Cache directories
+/tmp/
+.cache/

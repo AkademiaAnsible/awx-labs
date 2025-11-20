@@ -1,7 +1,16 @@
-ansible
+ansible>=2.15
+pynetbox>=7.3.0
+awxkit>=24.0.0
+pytz
+requests
+
+# Optional but recommended
+#yamllint
+#ansible-lint
+
+# Cloud providers (uncomment if needed)
 #boto
 #boto3
-#yamllint
 #msrestazure
 #msrest
 #azure.cli
