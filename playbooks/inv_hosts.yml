@@ -29,5 +29,5 @@
           ansible_host: "1.2.3.4"
           env: "test"
         controller_username: "admin"
-        controller_host: "http://18.169.240.72:30080/"
+        controller_host: "{{ controller_host }}"
         controller_password: "{{ controller_password }}"
