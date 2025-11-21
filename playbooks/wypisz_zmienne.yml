@@ -11,6 +11,12 @@
 
     - name: "wypisz na ekran"
       ansible.builtin.debug:
+        msg: "{{ hostvars[inventory_hostname].zmienna | default("") }}"
+      loop: "{{ groups['all'] }}"
+
+
+    - name: "wypisz na ekran"
+      ansible.builtin.debug:
         msg: "{{ hostvars['apache02'] }}"
 
     - name: "wypisz na ekran"
