@@ -11,8 +11,8 @@
 
     - name: "wypisz na ekran"
       ansible.builtin.debug:
-        msg: "{{ hostvars['apach02'] }}"
+        msg: "{{ hostvars['apache02'] }}"
 
     - name: "wypisz na ekran"
       ansible.builtin.debug:
-        msg: "{{ hostvars['apach02'].zmienna }}"
+        msg: "{{ hostvars['apache02'].zmienna }}"
