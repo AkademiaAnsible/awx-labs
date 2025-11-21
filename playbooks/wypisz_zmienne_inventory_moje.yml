@@ -1,0 +1,40 @@
+- hosts: localhost
+  tasks:
+    - name: zbuduj_inventory
+      ansible.builtin.add_host:
+        hostname: "{{ item }}"
+        groupname: kuba
+      loop: "{{ groups['all'] }}"
+      when: "{{ hostvars[item].zmienna_k8s is defined }}"
+
+
+
+
+- hosts: "{{ zmienna }}"
+
+  become: false
+  gather_facts: false
+
+  tasks:
+    - name: "wypisz na ekran"
+      ansible.builtin.debug:
+        msg: "{{ play_hosts }}"
+
+          #- name: "wypisz na ekran"
+          #  ansible.builtin.debug:
+          #    msg: "{{ hostvars[inventory_hostname] }}"
+          #  loop: "{{ groups['all'] }}"
+
+    - name: "wypisz na ekran"
+      ansible.builtin.debug:
+        msg: "{{ hostvars[inventory_hostname].zmienna | default('') }}"
+      loop: "{{ groups['all'] }}"
+
+
+    - name: "wypisz na ekran"
+      ansible.builtin.debug:
+        msg: "{{ hostvars['apache02'] }}"
+
+    - name: "wypisz na ekran"
+      ansible.builtin.debug:
+        msg: "{{ hostvars['apache02'].zmienna }}"

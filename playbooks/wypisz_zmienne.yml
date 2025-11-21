@@ -6,12 +6,12 @@
   tasks:
     - name: "wypisz na ekran"
       ansible.builtin.debug:
-        msg: "{{ hostvars[inventory_hostname] }}"
+        msg: "{{ hostvars[item] }}"
       loop: "{{ groups['all'] }}"
 
     - name: "wypisz na ekran"
       ansible.builtin.debug:
-        msg: "{{ hostvars[inventory_hostname].zmienna | default('') }}"
+        msg: "{{ hostvars[item].zmienna | default('') }}"
       loop: "{{ groups['all'] }}"
 
 
