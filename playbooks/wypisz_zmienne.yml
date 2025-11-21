@@ -1,5 +1,8 @@
 - hosts: localhost
 
+  become: false
+  gather_facts: false
+
   tasks:
     - name: "wypisz na ekran"
       ansible.builtin.debug:
