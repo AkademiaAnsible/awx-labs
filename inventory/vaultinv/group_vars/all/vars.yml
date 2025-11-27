@@ -1,0 +1,2 @@
+prod_env: "{{ prod_vault }}"
+dev_env: "{{ dev_vault }}"

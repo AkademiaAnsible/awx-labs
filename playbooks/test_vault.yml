@@ -1,0 +1,6 @@
+- hosts: localhost
+
+  tasks:
+    - name: print vars
+      debug:
+        msg: "dev vault: {{ dev_var }}; prod vault: {{ prod_var }}"
