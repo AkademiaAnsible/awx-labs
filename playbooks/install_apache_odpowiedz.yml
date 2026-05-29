@@ -5,11 +5,12 @@
 - hosts: apache
 
   vars:
-      vars_files_var: ["vars/szkolenie.yml", "vars/szkolenie_vault.yml"]
+    nazwa_uzytkownika: test1234
+  #    vars_files_var: ["vars/szkolenie.yml", "vars/szkolenie_vault.yml"]
 
-  pre_tasks:
-      - include_vars: "{{ item }}"
-        with_items: "{{ vars_files_var }}"
+  #pre_tasks:
+  #    - include_vars: "{{ item }}"
+  #      with_items: "{{ vars_files_var }}"
 
   tasks:
   - name: update cache 
